@@ -1,0 +1,53 @@
+@import "../../_mixins";
+@import "../../_variables";
+
+
+*[cwoperationbox]{
+  width: 275px;
+  list-style: none;
+
+  i.result-icon{
+		&.fa-circle-o-notch{
+			color: @cwAccentColor;
+		}
+		&.fa-check-circle-o{
+			color: @cwColor2Tint;
+		}
+		&.fa-times-circle-o{
+			color : @cwErrorColor;
+		}
+  }
+  
+
+  div.operation-container{
+    border-radius: 5px;
+    background-color: #eff1f3;
+    margin:5px;
+    height: 70px;
+    padding: 4px 4px 4px 32px;
+    position: relative;
+
+    .absolute{
+      position: absolute;
+    }
+    .left{
+      left: 10px;
+    }
+    .bottom{
+      bottom: 15px;
+    }
+    .right{
+      right:0;
+      margin-right: 10px;
+    }
+    
+    div.operation-name{
+      margin:1px 18px 1px 1px;
+      overflow: hidden;
+    }
+
+    .result-icon{
+      font-size: 2em;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div class="operation-container">
+    <div class="play-operation absolute left" ng-click="executeOperation()"><i class="fa fa-play"></i></div>
+    <div class="operation-name">{{item.name}}</div>
+    <div class="result-operation-details" ng-if="item.response">
+        <div class="result-status absolute left bottom">
+            <i class="result-icon fa" ng-class="{'fa-circle-o-notch fa-spin': item.response.status === 'pending', 'fa-check-circle-o': item.response.status === 'success', 'fa-times-circle-o': item.response.status === 'failure'}"></i>
+        </div>
+        <div class="result-message absolute bottom">{{item.response.message}}</div>
+        <div class="result-details absolute right bottom" ng-if="item.response.hasEnded && item.response.hasPopout"
+            ng-click="openPopout()"><i class="fa fa-external-link"></i></div>
+    </div>
+</div>
