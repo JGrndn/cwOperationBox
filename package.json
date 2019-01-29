@@ -1,0 +1,21 @@
+{
+  "name": "cwOperationBox",
+  "description": "Display Operation object type using a specific layout",
+  "version": "1.8.0",
+  "main": "cwOperationBox.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JGrndn/cwOperationBox"
+  },
+  "author": "Jerome GRONDIN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JGrndn/cwOperationBox/issues"
+  },
+  "homepage": "",
+  "wiki": "https://github.com/JGrndn/cwOperationBox/wiki",
+  "evolve-version": "4.1"
+}
