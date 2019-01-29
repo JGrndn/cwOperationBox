@@ -1,7 +1,7 @@
 {
   "name": "cwOperationBox",
   "description": "Display Operation object type using a specific layout",
-  "version": "1.8.0",
+  "version": "0.0.0",
   "main": "cwOperationBox.js",
   "scripts": {
     "test": ""
