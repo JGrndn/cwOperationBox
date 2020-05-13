@@ -12,17 +12,21 @@
                 return {
                     restrict: 'A',
                     templateUrl: loader.getDirectiveTemplatePath('cwTest', 'cwOperationBox'),
-                    scope: {
-                        item:'=data',
-                        url:'@'
-                    },
+                    // scope: {
+                    //     item:'=data',
+                    //     url:'@'
+                    // },
                     link: function ($scope) {
-                        var evodUrl = $scope.url;//'http://localhost:20006/';
+                        //var evodUrl = $scope.url;//'http://localhost:20006/';
+                        var evodUrl = window.location.origin + '/evolveondemand/';
                         var url = evodUrl + 'executeoperation/' + cwApi.cwConfigs.ModelFilename.toLowerCase() + '/' + $scope.item.object_id;
                         $scope.openPopout = function () {
                             if (!cwApi.isUndefined($scope.item)){
                                 cwApi.cwDiagramPopoutHelper.openDiagramPopout($scope.item, getPopoutName($scope.item));
                             }
+                        };
+                        $scope.hasPopout = function(item){
+                            return cwApi.ViewSchemaManager.pageExists(getPopoutName($scope.item));
                         };
                         $scope.executeOperation = function(){
                             if (!cwApi.isUndefined($scope.item)) {
